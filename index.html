@@ -363,9 +363,9 @@
           </div>
           <p class="card-desc">Disk image `.dmg`. Pra Macs com chip da Apple (não funciona em Macs Intel).</p>
           <ol class="card-steps">
-            <li>Baixe o arquivo abaixo (~9 MB)</li>
-            <li>Abra o `.dmg` e arraste o Fotopia pra <code>Applications</code></li>
-            <li>Primeira abertura: <strong>botão direito no app → Abrir → Abrir</strong> (contorna o Gatekeeper)</li>
+            <li>Baixe o arquivo abaixo e abra</li>
+            <li>Arraste o Fotopia pra pasta <code>Applications</code></li>
+            <li>Primeira abertura: tente abrir, vai aparecer "Apple não pôde verificar". Clique <strong>OK</strong>, vá em <strong>🍎 Ajustes do Sistema → Privacidade e Segurança → "Abrir Mesmo Assim"</strong>, autentique e tente de novo</li>
           </ol>
           <a class="btn is-loading" id="btn-mac" href="#" rel="noopener">
             <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3v12m0 0l-4-4m4 4l4-4M5 21h14"/></svg>
@@ -380,6 +380,27 @@
         <a href="https://github.com/Loja-Fiozato/fotopia-releases/releases/latest"
            style="color: #fda4af; text-decoration: underline;">GitHub diretamente</a>.
       </div>
+
+      <!-- FAQ — explica os avisos de seguranca que aparecem na primeira
+           instalacao em Windows e Mac. Reduz a chance do usuario assustar
+           com "Unknown publisher" ou "Apple nao pode verificar". -->
+      <details class="files-section">
+        <summary>
+          Por que aparecem avisos de segurança?
+          <span class="files-section-desc">Resposta curta: porque não paguei certificado.</span>
+        </summary>
+        <div style="padding: 0 24px 22px; font-size: 13.5px; color: var(--fg-dim); line-height: 1.7;">
+          <p style="margin-top: 18px;">
+            Windows e macOS mostram avisos de "desenvolvedor não identificado" pra apps que não pagaram <strong>certificados de assinatura</strong> caros (US$ 99–300 por ano). Como o Fotopia é um projeto pessoal, esses certificados não compensam.
+          </p>
+          <p>
+            <strong>Os avisos aparecem só na primeira instalação.</strong> Depois que você autoriza uma vez, o app abre normal pra sempre e as atualizações futuras são silenciosas.
+          </p>
+          <p style="margin-bottom: 0;">
+            <strong>O app é seguro</strong> — é compilado automaticamente pelo GitHub Actions e <a href="https://github.com/Loja-Fiozato/fotopia-releases/releases" style="color: var(--accent);">publicado neste repositório</a>. Roda inteiramente no seu computador, sem servidor.
+          </p>
+        </div>
+      </details>
 
       <!-- Seção avançada: lista TODOS os arquivos da release agrupados por
            plataforma. Colapsada por padrão. Power users (e o próprio
